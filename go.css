@@ -1,0 +1,34 @@
+body {
+    visibility: hidden;
+}
+
+div#nothing {
+    margin-bottom: 20px;
+}
+
+div#found {
+    margin-bottom: 20px;
+    display: none;
+}
+
+div#nothing #query {
+    font-weight: bold;
+}
+
+div#add {
+    margin-bottom: 16px;
+}
+
+div#edit {
+    margin-bottom: 16px;
+    display: none;
+}
+
+#shortcutText {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+div#viewAll {
+    margin-top: 20px;
+}

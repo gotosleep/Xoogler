@@ -1,0 +1,31 @@
+{
+  "name": "Xoogler",
+  "description": "Useful shortcuts!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+        "map.js",
+        "background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://b/",
+    "*://c/",
+    "*://cl/",
+    "*://cs/",
+    "*://docs/",
+    "*://drive/",
+    "*://go/",
+    "*://memegen/",
+    "*://moma/",
+    "*://sheets/",
+    "*://slides/",
+    "*://who/"
+  ]
+}

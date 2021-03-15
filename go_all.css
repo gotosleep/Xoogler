@@ -1,0 +1,24 @@
+/* table * {
+    font-size: 13px;
+} */
+
+.header {
+    font-weight: bold;
+}
+
+#allLabel {
+    margin-bottom: 16px;
+}
+
+#createHint {
+    margin-top:16px;
+    font-style: italic;
+}
+
+#empty {
+    display: none;
+}
+
+div#viewAll {
+    margin-top: 20px;
+}

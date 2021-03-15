@@ -1,0 +1,48 @@
+body {
+    margin: 20px 20px;
+    width: 900px;
+}
+
+div#savedContainer {
+    text-align: right;
+    visibility: hidden;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+}
+
+div#saved {
+    display: inline-block;
+    margin-bottom: 20px;
+    color:black;
+    font-weight: bold;
+}
+
+h2 {
+    background-color: #0000000c;
+    padding: 20px;
+}
+
+/* table td {
+    font-size: 12px;
+} */
+
+table {
+    border-spacing:  0px;
+}
+
+tr#head td {
+    font-weight: bold;
+}
+
+tr.odd {
+    background-color: #00000007;
+}
+
+td {
+    padding: 6px 6px;
+}
+
+input[type=text] {
+    padding: 6px;
+}
