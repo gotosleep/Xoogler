@@ -8,11 +8,11 @@ a:visited {
 }
 
 div#savedContainer {
-    text-align: right;
+    text-align: left;
     visibility: hidden;
     position: fixed;
-    top: 20px;
-    right: 40px;
+    bottom: 0px;
+    left: 20px;
 }
 
 div#saved {
