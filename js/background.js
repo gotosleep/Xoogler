@@ -1,26 +1,33 @@
-var activeMappings;
+var activeMappings = {};
 
-chrome.storage.sync.get(defaultMap,
-    function (overrides) {
-        activeMappings = overrides;
+chrome.storage.sync.get(null,
+    function (result) {
+        activeMappings = result;
+
+        // Load defaults
+        for (var key in defaultMap) {
+            if (!activeMappings[key]) {
+                activeMappings[key] = defaultMap[key];
+            }
+        }
     });
 
 chrome.webRequest.onBeforeRequest.addListener(
     function (details) {
         const url = new URL(details.url)
-        var destination = activeMappings[url.hostname]
-        
+        var destination = activeMappings[url.hostname];
+
         var path = url.pathname
         if (path && path.length > 1) {
             if (path.startsWith('/')) {
                 path = path.substr(1);
             }
-            const query = activeMappings[url.hostname + "-q"];
+            var query = activeMappings[url.hostname + "-q"];
             if (query) {
                 destination = destination + query + path
             }
         }
-        
+
         return { redirectUrl: destination };
     },
     {
@@ -43,20 +50,29 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 chrome.webRequest.onBeforeRequest.addListener(
     function (details) {
-        const url = new URL(details.url)        
-        var path = url.pathname
-        if (path && path.length > 1) {
-            if (path.startsWith('/')) {
-                path = path.substr(1);
+        const url = new URL(details.url)
+
+        var path = null;
+        if (url.pathname && url.pathname.length > 1) {
+            if (url.pathname.startsWith('/')) {
+                path = url.pathname.substr(1);
+            } else {
+                path = url.pathname;
             }
-            // const query = activeMappings[url.hostname + "-q"];
-            // if (query) {
-            //     destination = destination + query + path
-            // }
         }
 
-        const destination = chrome.runtime.getURL("go.html?q=" + path);
-        
+        var destination;
+        if (path) {
+            destination = activeMappings["go-" + path];
+            if (!destination) {
+                destination = chrome.runtime.getURL("go.html?q=" + path);
+            } else if (!destination.match(/^.+:\/\//)) {
+                destination = "http://" + destination;
+            }
+        } else {
+            destination = chrome.runtime.getURL("go_all.html");
+        }
+
         return { redirectUrl: destination };
     },
     {

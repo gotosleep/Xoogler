@@ -22,3 +22,7 @@
 div#viewAll {
     margin-top: 20px;
 }
+
+td {
+    padding: 12px 6px;
+}

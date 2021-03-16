@@ -1,6 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('q');
-const edit = urlParams.get("edit") == "true";
 const key = "go-" + query;
 
 chrome.storage.sync.get(
@@ -9,27 +8,18 @@ chrome.storage.sync.get(
     },
     function (result) {
         const destination = result[key];
-        if (edit) {
-            showPage(destination);
-        } else if (destination) {
-            redirect(destination);
-        } else if ("/" == query) {
-            redirect("go_all.html");
-        } else {
-            showPage();
-        }
+        showPage(destination);
     });
-
-function redirect(destination) {
-    window.location.replace(destination);
-};
 
 function showPage(destination) {
     const saved = document.querySelector("#savedContainer");
     const showToast = creeateSavedToast(saved);
 
     const shortcutText = document.querySelector("#shortcutText");
-    shortcutText.appendChild(document.createTextNode("go/" + query));
+    const link = document.createElement("a");
+    link.href = "http://go/" + query;
+    link.appendChild(document.createTextNode("go/" + query));
+    shortcutText.append(link);
 
     const destinationInput = document.querySelector("#destinationInput");
     if (destination) {

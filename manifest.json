@@ -1,12 +1,12 @@
 {
-  "name": "Xoogler",
+  "name": "Xoogler Shortcuts",
   "description": "Useful shortcuts!",
   "version": "1.0",
   "manifest_version": 2,
   "background": {
     "scripts": [
-        "map.js",
-        "background.js"
+        "./js/map.js",
+        "./js/background.js"
     ],
     "persistent": true
   },

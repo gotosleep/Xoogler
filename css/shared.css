@@ -3,6 +3,10 @@ body {
     width: 900px;
 }
 
+a:visited {
+    color: blue;
+}
+
 div#savedContainer {
     text-align: right;
     visibility: hidden;
@@ -22,10 +26,6 @@ h2 {
     background-color: #0000000c;
     padding: 20px;
 }
-
-/* table td {
-    font-size: 12px;
-} */
 
 table {
     border-spacing:  0px;

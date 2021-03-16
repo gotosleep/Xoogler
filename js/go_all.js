@@ -34,8 +34,10 @@ function addRow(table, key, value, odd) {
 
     const cleanedKey = key.replace("go-", "go/");
     const shortcutCol = document.createElement("td");
-    const shortcutText = document.createTextNode(cleanedKey);
-    shortcutCol.appendChild(shortcutText);
+    const link = document.createElement("a");
+    link.href = "http://" + cleanedKey;
+    link.appendChild(document.createTextNode(cleanedKey));
+    shortcutCol.append(link);
 
     const destinationCol = document.createElement("td");
     const destinationText = document.createTextNode(value);
@@ -46,7 +48,7 @@ function addRow(table, key, value, odd) {
     editButton.appendChild(document.createTextNode("Edit"));
     editCol.appendChild(editButton);
     editButton.onclick = () => {
-        window.location.href = "go.html?q=" + key.replace("go-", "") + "&edit=true";
+        window.location.href = chrome.runtime.getURL("go.html?q=" + key.replace("go-", ""));
     }
 
     const deleteCol = document.createElement("td");

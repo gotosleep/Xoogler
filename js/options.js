@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             var keyColumn = document.createElement("td");
-            var keyText = document.createTextNode(key + "/");
-            keyColumn.appendChild(keyText);
+            const link = document.createElement("a");
+            link.href = "http://" + key;
+            link.appendChild(document.createTextNode(key + "/"));
+            keyColumn.append(link);
 
             var overrideCol = document.createElement("td");
             const overrideText = document.createElement("input");
