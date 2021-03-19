@@ -1,6 +1,6 @@
 # Xoogler Shortcuts
 
-Xoogler Shortcuts is a Chrome extension that provides url based shortcuts for common destinations that many Googlers (current and former) are probably familiar with. Miss typing "c/" in your url box to quickly navigate to your calendar? Then this extension is for you.
+Xoogler Shortcuts is a Chrome extension that provides url based shortcuts for common destinations that many Googlers (current and former) are probably familiar with. Miss typing `c/` in your url box to quickly navigate to your calendar? Then this extension is for you.
 
 Available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/xoogler-shortcuts/nlhdklikmcejjaojgkhaohfhngfglcmd).
 
