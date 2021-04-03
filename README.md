@@ -11,7 +11,7 @@ Available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/xo
 * cs/
 * docs/
 * drive/
-* memegen/
+* m/
 * moma/
 * sheets/
 * slides/
