@@ -13,8 +13,6 @@ const defaultMap = {
     "drive-q": "/drive/search?q=",
     "m": "https://mail.google.com/",
     "m-q": "/mail/#search/",
-    "memegen": "https://www.reddit.com",
-    "memegen-q": "/search?q=",
     "moma": "https://www.google.com",
     "moma-q": "/search?q=",
     "sheets": "https://docs.google.com/spreadsheets",

@@ -39,7 +39,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             "*://docs/*",
             "*://drive/*",
             "*://m/*",
-            "*://memegen/*",
             "*://moma/*",
             "*://sheets/*",
             "*://slides/*",
