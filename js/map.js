@@ -11,6 +11,8 @@ const defaultMap = {
     "docs-q": "/document/u/0/?q=",
     "drive": "https://drive.google.com",
     "drive-q": "/drive/search?q=",
+    "m": "https://mail.google.com/",
+    "m-q": "/mail/#search/",
     "memegen": "https://www.reddit.com",
     "memegen-q": "/search?q=",
     "moma": "https://www.google.com",
