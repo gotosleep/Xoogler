@@ -1,8 +1,8 @@
 const defaultMap = {
     "b": "https://github.com/issues/assigned",
     "b-q": null,
-    "c": "https://calendar.google.com/calendar/r",
-    "c-q": "/search?q=",
+    "c": "https://calendar.google.com",
+    "c-q": "/calendar/embed?src=%s%40gmail.com",
     "cl": "https://github.com/pulls",
     "cl-q": null,
     "cs": "https://github.com/search",

@@ -24,7 +24,11 @@ chrome.webRequest.onBeforeRequest.addListener(
             }
             var query = activeMappings[url.hostname + "-q"];
             if (query) {
-                destination = destination + query + path
+                if (query.includes('%s')) {
+                    destination = (destination + query).replace('%s', path)
+                } else {
+                    destination = destination + query + path
+                }
             }
         }
 
