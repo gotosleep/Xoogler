@@ -1,3 +1,16 @@
 div#viewAll {
     margin-top: 20px;
 }
+
+.note {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.note code {
+    font-size: 125%;
+    background-color: #00000013;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+}
